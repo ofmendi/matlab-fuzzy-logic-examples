@@ -1,6 +1,4 @@
 # Matlab Fuzzy Logic Examples
-(easy-level)
-
 > ### Depo.fis
 > Amaç : Sular kesilince depoda bulunan suu miktarını uzun surede ideal şekilde tüketmek.
 > * Girişler
