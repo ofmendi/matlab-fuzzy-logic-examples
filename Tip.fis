@@ -1,0 +1,46 @@
+[System]
+Name='Tip'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=8
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Hizmet'
+Range=[0 10]
+NumMFs=3
+MF1='kotu':'trimf',[0 0 4]
+MF2='normal':'trimf',[1 5 9]
+MF3='iyi':'trimf',[6 10 10]
+
+[Input2]
+Name='Yemek'
+Range=[0 10]
+NumMFs=3
+MF1='kotu':'trimf',[-4 0 4]
+MF2='normal':'trimf',[1 5 9]
+MF3='iyi':'trimf',[6 10 10]
+
+[Output1]
+Name='BahsisYuzdesi'
+Range=[0 25]
+NumMFs=3
+MF1='az':'trimf',[5 7.5 11.5]
+MF2='normal':'trimf',[6 12.5 22.5]
+MF3='cok':'trimf',[13.5 25 25]
+
+[Rules]
+1 1, 1 (1) : 1
+1 2, 1 (1) : 1
+1 3, 2 (1) : 1
+2 1, 1 (1) : 1
+2 2, 2 (1) : 1
+3 1, 2 (1) : 1
+3 2, 3 (1) : 1
+3 3, 3 (1) : 1

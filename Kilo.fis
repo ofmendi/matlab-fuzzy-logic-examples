@@ -1,0 +1,55 @@
+[System]
+Name='Kilo'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=9
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='GKT'
+Range=[0 3500]
+NumMFs=3
+MF1='az':'trimf',[0 0 1400]
+MF2='normal':'trimf',[350 1750 3150]
+MF3='cok':'trimf',[2100 3500 3500]
+
+[Input2]
+Name='Yas'
+Range=[17 90]
+NumMFs=3
+MF1='genc':'trimf',[-12.2 17 46.2]
+MF2='ortayasli':'trimf',[30 53.5 82.7]
+MF3='yasli':'trimf',[70 90 90]
+
+[Input3]
+Name='GunlukSpor'
+Range=[0 100]
+NumMFs=3
+MF1='az':'trimf',[-40 0 40]
+MF2='normal':'trimf',[10 50 90]
+MF3='cok':'trimf',[60 100 140]
+
+[Output1]
+Name='Kilo'
+Range=[30 120]
+NumMFs=3
+MF1='zayif':'trimf',[30 30 54.83]
+MF2='normal':'trimf',[39 71.4183673469388 95]
+MF3='cok':'trimf',[90 120 120]
+
+[Rules]
+1 1 1, 1 (1) : 1
+2 1 1, 1 (1) : 1
+2 2 1, 3 (1) : 1
+3 2 1, 3 (1) : 1
+2 2 3, 1 (1) : 1
+3 1 3, 1 (1) : 1
+3 3 3, 2 (1) : 1
+3 3 2, 3 (1) : 1
+3 3 1, 3 (1) : 1
